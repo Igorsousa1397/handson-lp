@@ -29,7 +29,7 @@ export default function Para() {
             </div>
           ))}
         </div>
-        <div style={{ marginTop: "1.75rem", padding: "1rem 1.25rem", background: "rgba(192,38,211,0.05)", border: "1px solid rgba(192,38,211,0.18)", borderRadius: 12, borderLeft: "3px solid var(--pink)", borderRadius: "0 12px 12px 0" }}>
+        <div style={{ marginTop: "1.75rem", padding: "1rem 1.25rem", background: "rgba(192,38,211,0.05)", border: "1px solid rgba(192,38,211,0.18)", borderLeft: "3px solid var(--pink)", borderRadius: "0 12px 12px 0" }}>
           <p style={{ fontSize: 14, color: "var(--pink-light)", lineHeight: 1.7 }}>
             Se você se identificou com pelo menos um desses perfis, o Instituto Hands On foi feito pra você.
           </p>
