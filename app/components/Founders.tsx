@@ -32,7 +32,7 @@ export default function Founders() {
               </div>
             ))}
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.75rem", marginTop: "2.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: "0.75rem", marginTop: "2.5rem" }}>
             {[
               { n: "+100", l: "Alunos formados" },
               { n: "+30", l: "Transições" },

@@ -59,7 +59,7 @@ export default function Hero() {
             <button className="btn-outline" onClick={() => document.getElementById("modulos")?.scrollIntoView({ behavior: "smooth" })}>Ver como funciona</button>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.75rem", opacity: 0, animation: "fadeUp 0.6s ease 0.7s forwards" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))", gap: "0.75rem", opacity: 0, animation: "fadeUp 0.6s ease 0.7s forwards" }}>
             {[
               { n: 100, s: "+", l: "Alunos formados" },
               { n: 30, s: "+", l: "Transições de carreira" },

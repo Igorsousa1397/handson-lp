@@ -51,7 +51,7 @@ export default function Modulos() {
           ))}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem", alignItems: "start" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "1.5rem", alignItems: "start" }}>
           {/* Module */}
           <div style={{ background: "var(--card)", border: `1px solid ${mod.color}35`, borderRadius: 18, padding: "1.75rem", transition: "all 0.3s" }}>
             <div style={{ fontSize: 10, color: mod.color, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 7 }}>{mod.badge}</div>

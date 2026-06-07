@@ -17,8 +17,8 @@
   --text-1: #f0f0ff;
   --text-2: #9090b0;
   --text-3: #50506a;
-  --container: 1080px;
-  --px: clamp(1.25rem, 5vw, 3rem);
+  --container: 860px;
+  --px: clamp(1.25rem, 5vw, 2rem);
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
