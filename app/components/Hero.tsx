@@ -40,10 +40,10 @@ export default function Hero() {
             </span>
           </div>
 
-          <h1 style={{ fontSize: "clamp(40px, 6.5vw, 72px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.02em", marginBottom: "1.25rem", opacity: 0, animation: "fadeUp 0.6s ease 0.2s forwards" }}>
-            Torne-se um<br />
-            <span style={{ color: "var(--pink-light)" }} className="glow-pink">Testador de Software</span><br />
-            <span style={{ color: "var(--text-2)", fontWeight: 400, fontSize: "0.68em" }}>em 6 meses.</span>
+          <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(48px, 7vw, 88px)", fontWeight: 800, lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1.25rem", opacity: 0, animation: "fadeUp 0.6s ease 0.2s forwards" }}>
+            Torne-se um{" "}
+            <span style={{ color: "var(--pink-light)" }} className="glow-pink">Testador de Software</span>
+            <span style={{ color: "var(--text-2)", fontWeight: 600, fontSize: "0.72em", display: "block", marginTop: "0.05em" }}>em 6 meses.</span>
           </h1>
 
           <p style={{ fontSize: "clamp(15px, 1.8vw, 18px)", color: "var(--text-2)", lineHeight: 1.7, maxWidth: 500, marginBottom: "0.625rem", opacity: 0, animation: "fadeUp 0.6s ease 0.35s forwards" }}>

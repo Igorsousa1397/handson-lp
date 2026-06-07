@@ -40,7 +40,7 @@ export default function Pricing() {
       <div className="container">
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <span className="tag tag-amber" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Investimento</span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.02em" }}>Escolha seu plano</h2>
+          <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>Escolha seu plano</h2>
           <p style={{ color: "var(--text-2)", marginTop: "0.5rem", fontSize: 14 }}>Todos com parcelamento em até 12x sem juros no cartão</p>
 
           <div style={{ display: "inline-flex", gap: 3, marginTop: "1.25rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 100, padding: 3 }}>

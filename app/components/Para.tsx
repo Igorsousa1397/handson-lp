@@ -13,7 +13,7 @@ export default function Para() {
       <div className="container">
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="tag tag-purple" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Veja se o curso é para você</span>
-          <h2 style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.02em" }}>
+          <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
             Você se encaixa em algum<br />
             <span style={{ color: "var(--purple-light)" }}>desses perfis?</span>
           </h2>

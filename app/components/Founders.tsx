@@ -11,7 +11,7 @@ export default function Founders() {
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <div style={{ marginBottom: "3rem" }}>
             <span className="tag tag-cyan" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Quem está por trás</span>
-            <h2 style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
               Sostenes e Daniel —<br />
               <span style={{ color: "var(--cyan-light)" }}>a história real do Instituto</span>
             </h2>

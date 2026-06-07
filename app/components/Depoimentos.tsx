@@ -16,7 +16,7 @@ export default function Depoimentos() {
         <div style={{ maxWidth: 720, margin: "0 auto" }}>
           <div style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="tag tag-purple" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Transformações reais</span>
-            <h2 style={{ fontSize: "clamp(26px, 3.5vw, 40px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.02em" }}>
+            <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
               O que nossos alunos dizem
             </h2>
             <p style={{ color: "var(--text-3)", marginTop: "0.5rem", fontSize: 13 }}>mensagens reais — sem filtro</p>
