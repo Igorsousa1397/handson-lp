@@ -49,7 +49,7 @@ export default function Pricing() {
                 padding: "7px 18px", borderRadius: 100, border: "none", cursor: "none",
                 background: mode === m ? "var(--purple)" : "transparent",
                 color: mode === m ? "#fff" : "var(--text-2)",
-                fontFamily: "Syne, sans-serif", fontWeight: 500, fontSize: 12,
+                fontFamily: "DM Sans, sans-serif", fontWeight: 500, fontSize: 12,
                 transition: "all 0.2s"
               }}>
                 {m === "parcela" ? "12x sem juros" : "À vista"}
@@ -65,14 +65,14 @@ export default function Pricing() {
                 <div style={{ fontSize: 11, padding: "3px 11px", borderRadius: 100, background: `${color}14`, color, border: `1px solid ${color}28`, display: "inline-block", marginBottom: "0.75rem" }}>{badge}</div>
               )}
               <div style={{ fontSize: 28, marginBottom: "0.375rem" }}>{icon}</div>
-              <div style={{ fontFamily: "Syne, sans-serif", fontSize: 20, fontWeight: 800, color, marginBottom: 3 }}>{name}</div>
+              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 20, fontWeight: 800, color, marginBottom: 3 }}>{name}</div>
               <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: "1.125rem", lineHeight: 1.5 }}>{desc}</div>
 
               <div style={{ marginBottom: "1.125rem" }}>
                 <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: 1 }}>
                   {mode === "parcela" ? "12x de" : "À vista por"}
                 </div>
-                <div style={{ fontFamily: "Syne, sans-serif", fontSize: 32, fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 32, fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
                   {mode === "parcela" ? <>R$<span style={{ fontSize: 20 }}>{price.parcela}</span></> : price.vista}
                 </div>
                 <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 3 }}>
@@ -103,7 +103,7 @@ export default function Pricing() {
                 border: featured ? "none" : `1px solid ${color}40`,
                 background: featured ? "var(--pink)" : "transparent",
                 color: featured ? "#fff" : color,
-                fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 13,
+                fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 13,
                 transition: "all 0.2s",
                 boxShadow: featured ? "0 0 24px rgba(192,38,211,0.28)" : "none"
               }}

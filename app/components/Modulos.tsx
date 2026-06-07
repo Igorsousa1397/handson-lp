@@ -45,7 +45,7 @@ export default function Modulos() {
               border: `1px solid ${active === i ? color : "var(--border)"}`,
               background: active === i ? `${color}14` : "transparent",
               color: active === i ? color : "var(--text-3)",
-              fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 12,
+              fontFamily: "DM Sans, sans-serif", fontWeight: 600, fontSize: 12,
               transition: "all 0.2s"
             }}>{badge}</button>
           ))}
@@ -55,7 +55,7 @@ export default function Modulos() {
           {/* Module */}
           <div style={{ background: "var(--card)", border: `1px solid ${mod.color}35`, borderRadius: 18, padding: "1.75rem", transition: "all 0.3s" }}>
             <div style={{ fontSize: 10, color: mod.color, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 7 }}>{mod.badge}</div>
-            <h3 style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800, marginBottom: "1.25rem", color: mod.color }}>{mod.title}</h3>
+            <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 22, fontWeight: 800, marginBottom: "1.25rem", color: mod.color }}>{mod.title}</h3>
             <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
               {mod.items.map((item) => (
                 <div key={item} style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
@@ -73,7 +73,7 @@ export default function Modulos() {
             <div style={{ background: "var(--card)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 18, padding: "1.5rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: "1rem" }}>
                 <span style={{ fontSize: 18 }}>🎁</span>
-                <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, color: "#fbbf24", fontSize: 14 }}>Bônus inclusos</span>
+                <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, color: "#fbbf24", fontSize: 14 }}>Bônus inclusos</span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {bonus.map((b) => (

@@ -32,7 +32,7 @@ body {
   cursor: none;
 }
 
-h1, h2, h3 { font-family: 'Syne', sans-serif; }
+h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
 
 /* CONTAINER */
 .container {
@@ -108,7 +108,7 @@ section { position: relative; z-index: 2; }
 .btn-primary {
   background: var(--pink); color: #fff; border: none;
   padding: 13px 28px; border-radius: 100px;
-  font-family: 'Syne', sans-serif; font-weight: 600; font-size: 14px;
+  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px;
   cursor: none; position: relative; overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap;
 }
@@ -118,7 +118,7 @@ section { position: relative; z-index: 2; }
   background: transparent; color: var(--purple-light);
   border: 1px solid var(--border-2);
   padding: 12px 24px; border-radius: 100px;
-  font-family: 'Syne', sans-serif; font-weight: 500; font-size: 14px;
+  font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 14px;
   cursor: none; transition: all 0.2s; white-space: nowrap;
 }
 .btn-outline:hover { border-color: var(--purple); background: var(--purple-glow); }
@@ -143,7 +143,7 @@ section { position: relative; z-index: 2; }
 
 /* STAT */
 .stat-num {
-  font-family: 'Syne', sans-serif; font-size: 34px; font-weight: 800;
+  font-family: 'Barlow Condensed', sans-serif; font-size: 34px; font-weight: 800;
   background: linear-gradient(135deg, #fff 0%, var(--purple-light) 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }

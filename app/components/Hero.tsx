@@ -50,7 +50,7 @@ export default function Hero() {
             Domine as melhores práticas de QA e comece uma nova carreira ganhando de{" "}
             <strong style={{ color: "var(--text-1)" }}>R$4k a R$20k por mês</strong> — sem experiência prévia em TI.
           </p>
-          <p style={{ fontSize: 16, color: "var(--purple-light)", fontFamily: "Syne, sans-serif", fontWeight: 600, marginBottom: "2rem", opacity: 0, animation: "fadeUp 0.6s ease 0.45s forwards" }}>
+          <p style={{ fontSize: 16, color: "var(--purple-light)", fontFamily: "DM Sans, sans-serif", fontWeight: 600, marginBottom: "2rem", opacity: 0, animation: "fadeUp 0.6s ease 0.45s forwards" }}>
             Faria diferença no seu orçamento?
           </p>
 

@@ -19,9 +19,9 @@ export default function Nav() {
             width: 30, height: 30, borderRadius: 8, flexShrink: 0,
             background: "linear-gradient(135deg, var(--purple), var(--pink))",
             display: "flex", alignItems: "center", justifyContent: "center",
-            fontFamily: "Syne, sans-serif", fontWeight: 800, fontSize: 14, color: "#fff"
+            fontFamily: "DM Sans, sans-serif", fontWeight: 800, fontSize: 14, color: "#fff"
           }}>H</div>
-          <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "-0.01em" }}>
+          <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "-0.01em" }}>
             Hands On <span style={{ color: "var(--text-3)", fontWeight: 400 }}>Instituto</span>
           </span>
         </div>

@@ -25,11 +25,11 @@ export default function Depoimentos() {
           <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 20, padding: "2rem", marginBottom: "1.25rem", minHeight: 180, position: "relative" }}>
             <div style={{ position: "absolute", top: 20, left: 24, fontSize: 56, color: "var(--purple)", opacity: 0.12, fontFamily: "serif", lineHeight: 1 }}>"</div>
             <div style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start", marginBottom: "1.25rem" }}>
-              <div style={{ width: 44, height: 44, borderRadius: "50%", background: deps[active].color, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "Syne,sans-serif", fontWeight: 700, fontSize: 15, flexShrink: 0 }}>
+              <div style={{ width: 44, height: 44, borderRadius: "50%", background: deps[active].color, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 15, flexShrink: 0 }}>
                 {deps[active].initials}
               </div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: "Syne,sans-serif", fontWeight: 600, fontSize: 14 }}>Aluno empregado</div>
+                <div style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 600, fontSize: 14 }}>Aluno empregado</div>
                 <div style={{ fontSize: 12, color: "var(--text-3)" }}>{deps[active].role} · {deps[active].empresa}</div>
               </div>
               <span style={{ fontSize: 12, color: "#fbbf24" }}>★★★★★</span>

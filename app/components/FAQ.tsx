@@ -27,7 +27,7 @@ export default function FAQ() {
                 width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                 padding: "1.125rem 0", background: "none", border: "none", cursor: "none", textAlign: "left", gap: "1rem"
               }}>
-                <span style={{ fontFamily: "Syne, sans-serif", fontWeight: 600, fontSize: 14, color: "var(--text-1)" }}>{q}</span>
+                <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 600, fontSize: 14, color: "var(--text-1)" }}>{q}</span>
                 <span style={{ color: "var(--purple-light)", fontSize: 18, flexShrink: 0, transition: "transform 0.3s", transform: open === i ? "rotate(45deg)" : "rotate(0)" }}>+</span>
               </button>
               <div className="faq-answer" style={{ maxHeight: open === i ? 200 : 0, opacity: open === i ? 1 : 0 }}>

@@ -23,7 +23,7 @@ export default function Para() {
             <div key={title} className="card" style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
               <div style={{ fontSize: 24, flexShrink: 0, marginTop: 1 }}>{icon}</div>
               <div>
-                <div style={{ fontSize: 14, fontWeight: 600, fontFamily: "Syne, sans-serif", marginBottom: 4 }}>{title}</div>
+                <div style={{ fontSize: 14, fontWeight: 600, fontFamily: "DM Sans, sans-serif", marginBottom: 4 }}>{title}</div>
                 <div style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.6 }}>{desc}</div>
               </div>
             </div>

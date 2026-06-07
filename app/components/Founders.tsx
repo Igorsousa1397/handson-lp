@@ -40,7 +40,7 @@ export default function Founders() {
               { n: "R$4–20k", l: "Faixa salarial" },
             ].map(({ n, l }) => (
               <div key={l} style={{ padding: "1rem 0.875rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, textAlign: "center" }}>
-                <div style={{ fontFamily: "Syne, sans-serif", fontSize: "clamp(18px,2vw,22px)", fontWeight: 800, color: "var(--text-1)", marginBottom: 3 }}>{n}</div>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(18px,2vw,22px)", fontWeight: 800, color: "var(--text-1)", marginBottom: 3 }}>{n}</div>
                 <div style={{ fontSize: 11, color: "var(--text-3)", lineHeight: 1.4 }}>{l}</div>
               </div>
             ))}
