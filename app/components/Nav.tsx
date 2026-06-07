@@ -14,16 +14,12 @@ export default function Nav() {
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
-        <div style={{ display: "flex", alignItems: "center", gap: 9 }}>
-          <div style={{
-            width: 30, height: 30, borderRadius: 8, flexShrink: 0,
-            background: "linear-gradient(135deg, var(--purple), var(--pink))",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontFamily: "DM Sans, sans-serif", fontWeight: 800, fontSize: 14, color: "#fff"
-          }}>H</div>
-          <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 14, letterSpacing: "-0.01em" }}>
-            Hands On <span style={{ color: "var(--text-3)", fontWeight: 400 }}>Instituto</span>
-          </span>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img
+            src="/logo.png"
+            alt="Instituto Hands On"
+            style={{ height: 48, width: "auto", objectFit: "contain" }}
+          />
         </div>
         <div className="nav-links">
           {[["Módulos","modulos"],["Resultados","resultados"],["Planos","planos"]].map(([l, id]) => (
