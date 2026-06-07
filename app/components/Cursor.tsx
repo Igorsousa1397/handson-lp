@@ -1,11 +1,17 @@
 "use client";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Cursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
+  const [isTouch, setIsTouch] = useState(true);
 
   useEffect(() => {
+    // Detecta se é dispositivo touch — se sim, não renderiza cursor customizado
+    const hasTouch = window.matchMedia("(pointer: coarse)").matches;
+    setIsTouch(hasTouch);
+    if (hasTouch) return;
+
     const move = (e: MouseEvent) => {
       if (cursorRef.current) {
         cursorRef.current.style.left = e.clientX - 5 + "px";
@@ -19,6 +25,8 @@ export default function Cursor() {
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, []);
+
+  if (isTouch) return null;
 
   return (
     <>
