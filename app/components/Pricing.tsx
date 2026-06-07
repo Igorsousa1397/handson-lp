@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const plans = [
   {
-    key: "prata", icon: "🥈", name: "Prata", color: "#94a3b8",
+    key: "prata", icon: "🥈", name: "Prata", color: "#94a3b8", badge: "💰 Mais acessível",
     desc: "Módulo I — Teoria e Testes Manuais",
     price: { parcela: "247,50", vista: "R$2.970,00" },
     items: ["Fundamentos da Qualidade de Software","Estratégias e tipos de teste","Metodologias Ágeis (SDLC / STLC)","Testes manuais na prática","Mentalidade do QA","Plataforma com aulas gravadas"],
