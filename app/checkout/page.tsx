@@ -133,10 +133,10 @@ function CheckoutContent() {
           ))}
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr min(100%, 340px)", gap: "1.5rem", alignItems: "start" }}>
+        <div className="checkout-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr)", gap: "1.5rem", alignItems: "start" }}>
 
           {/* Coluna esquerda */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.25rem", minWidth: 0 }}>
 
             {/* Step 1 — Dados pessoais */}
             {step === 1 && (
@@ -174,7 +174,7 @@ function CheckoutContent() {
                   marginTop: "1.5rem", width: "100%", padding: "14px", borderRadius: 100,
                   background: "var(--purple)", border: "none", color: "#fff",
                   fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 14, cursor: "pointer",
-                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8,
+                  display: "flex", alignItems: "center", justifyContent: "center", gap: 8, whiteSpace: "nowrap",
                   transition: "opacity 0.2s",
                 }}>
                   Continuar para pagamento <ArrowRight size={15} />
@@ -307,7 +307,7 @@ function CheckoutContent() {
           </div>
 
           {/* Coluna direita — Resumo */}
-          <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 16, padding: "1.5rem", position: "sticky", top: 80 }}>
+          <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 16, padding: "1.5rem" }}>
             <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 16, fontWeight: 700, marginBottom: "1rem", color: "var(--text-3)", textTransform: "uppercase", letterSpacing: "0.06em" }}>Resumo do pedido</h3>
 
             {/* Seletor de plano */}

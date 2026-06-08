@@ -38,6 +38,12 @@ body {
 
 h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
 
+/* CHECKOUT */
+.checkout-grid { grid-template-columns: minmax(0, 1fr); }
+@media (min-width: 700px) {
+  .checkout-grid { grid-template-columns: 1fr 340px; }
+}
+
 /* CONTAINER */
 .container {
   max-width: var(--container);
