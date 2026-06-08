@@ -74,6 +74,21 @@ export default function IntroGate({ onClose }: { onClose: () => void }) {
         </div>
       )}
 
+      {/* Título */}
+      <div style={{ textAlign: "center", marginBottom: "1.25rem" }}>
+        <p style={{ fontSize: 12, fontWeight: 600, letterSpacing: "0.1em", color: "var(--purple-light)", textTransform: "uppercase", marginBottom: 6, fontFamily: "DM Sans, sans-serif" }}>
+          Uma mensagem do fundador
+        </p>
+        <h2 style={{
+          fontFamily: "'Barlow Condensed', sans-serif",
+          fontSize: "clamp(24px, 4vw, 38px)",
+          fontWeight: 800, color: "#fff", lineHeight: 1.1, margin: 0,
+        }}>
+          Antes de começar,{" "}
+          <span style={{ color: "var(--pink)" }}>assista isso</span>
+        </h2>
+      </div>
+
       {/* Container do vídeo */}
       <div style={{
         width: "min(85vw, 900px)",
