@@ -108,7 +108,7 @@ function CheckoutContent() {
           <a href="/" style={{ display: "flex", alignItems: "center", gap: 6, color: "var(--text-3)", textDecoration: "none", fontSize: 13 }}>
             <ArrowLeft size={15} /> Voltar
           </a>
-          <img src="/logo.png" alt="Hands On" style={{ height: 36, objectFit: "contain" }} />
+          <img src="/logo.png" alt="Hands On" style={{ height: 36, objectFit: "contain", position: "absolute", left: "50%", transform: "translateX(-50%)" }} />
           <div style={{ display: "flex", alignItems: "center", gap: 5, fontSize: 12, color: "var(--text-3)" }}>
             <Lock size={12} /> Checkout seguro
           </div>
@@ -116,8 +116,8 @@ function CheckoutContent() {
       </div>
 
       <div className="container" style={{ maxWidth: 960, paddingTop: "2rem" }}>
-        {/* Steps */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: "2rem" }}>
+        {/* Steps — centralizado */}
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, marginBottom: "2rem" }}>
           {[{ n: 1, label: "Seus dados" }, { n: 2, label: "Pagamento" }].map(({ n, label }) => (
             <div key={n} style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <div style={{
