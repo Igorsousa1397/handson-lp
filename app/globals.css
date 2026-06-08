@@ -33,7 +33,6 @@ body {
 
 @media (pointer: fine) {
   body:not(.checkout) { cursor: none; }
-  body:not(.checkout) button, body:not(.checkout) a, body:not(.checkout) [role="button"] { cursor: none !important; }
 }
 
 h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
@@ -135,7 +134,7 @@ section { position: relative; z-index: 2; }
   background: var(--pink); color: #fff; border: none;
   padding: 13px 28px; border-radius: 100px;
   font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 14px;
-  cursor: none; position: relative; overflow: hidden;
+  cursor: pointer; position: relative; overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap;
 }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 32px rgba(192,38,211,0.45); }
@@ -145,7 +144,7 @@ section { position: relative; z-index: 2; }
   border: 1px solid var(--border-2);
   padding: 12px 24px; border-radius: 100px;
   font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 14px;
-  cursor: none; transition: all 0.2s; white-space: nowrap;
+  cursor: pointer; transition: all 0.2s; white-space: nowrap;
 }
 .btn-outline:hover { border-color: var(--purple); background: var(--purple-glow); }
 
@@ -187,6 +186,7 @@ section { position: relative; z-index: 2; }
 .price-card.featured::before {
   content: ''; position: absolute; inset: 0;
   background: radial-gradient(ellipse at top, rgba(124,58,237,0.07) 0%, transparent 55%);
+  pointer-events: none;
 }
 
 /* TIMELINE */

@@ -7,7 +7,7 @@ const CLOUDFLARE_VIDEO_ID = "TODO_STORYTELLING_ID";
 export default function IntroGate({ onClose }: { onClose: () => void }) {
   const [canClose, setCanClose] = useState(false);
   const [closing, setClosing] = useState(false);
-  const [countdown, setCountdown] = useState(5);
+  const [countdown, setCountdown] = useState(10);
   const isReady = !CLOUDFLARE_VIDEO_ID.startsWith("TODO");
 
   // Countdown para mostrar o botão fechar
