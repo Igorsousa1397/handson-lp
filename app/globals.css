@@ -52,6 +52,14 @@ h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
   .stats-mobile  { display: none; }
 }
 
+/* PRICING CARDS */
+.pricing-desktop { display: none !important; }
+.pricing-mobile  { display: block; }
+@media (min-width: 700px) {
+  .pricing-desktop { display: grid !important; }
+  .pricing-mobile  { display: none; }
+}
+
 /* CONTAINER */
 .container {
   max-width: var(--container);
