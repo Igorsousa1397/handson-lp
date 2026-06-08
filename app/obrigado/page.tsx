@@ -3,6 +3,10 @@ import { Check, MessageCircle } from "lucide-react";
 export default function Obrigado() {
   return (
     <main style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", padding: "2rem" }}>
+      <style>{`
+        body, body * { cursor: auto !important; }
+        body button, body a { cursor: pointer !important; }
+      `}</style>
       <div style={{ maxWidth: 480, width: "100%", textAlign: "center" }}>
         <div style={{
           width: 72, height: 72, borderRadius: "50%", margin: "0 auto 1.5rem",

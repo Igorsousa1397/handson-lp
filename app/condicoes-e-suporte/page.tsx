@@ -1,6 +1,7 @@
 export default function CondicoeseSuporte() {
   return (
     <main style={{ minHeight: "100vh", padding: "100px 0 80px" }}>
+      <style>{`body, body * { cursor: auto !important; } body a { cursor: pointer !important; }`}</style>
       <div className="container" style={{ maxWidth: 720 }}>
         <a href="/" style={{ fontSize: 13, color: "var(--purple)", textDecoration: "none", display: "inline-block", marginBottom: "2rem" }}>← Voltar</a>
 
