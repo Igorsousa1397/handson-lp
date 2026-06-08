@@ -49,7 +49,7 @@ export default function FAQ() {
                 Tenho interesse! <ArrowRight size={15} strokeWidth={2.5} />
               </button>
               <div style={{ marginTop: "0.875rem", fontSize: 12, color: "var(--text-3)" }}>
-                Pix · Cartão em até 12x · Boleto · (11) 96331-9196
+                Pix · Cartão em até 12x · Boleto
               </div>
             </div>
           </div>
