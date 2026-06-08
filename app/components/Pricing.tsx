@@ -128,8 +128,8 @@ export default function Pricing() {
           </div>
         </div>
 
-        {/* Desktop — grid 2x2 */}
-        <div className="pricing-desktop" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1rem" }}>
+        {/* Desktop — 3 colunas fixas */}
+        <div className="pricing-desktop" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
           {plans.map(p => <PlanCard key={p.key} plan={p} mode={mode} />)}
         </div>
 
