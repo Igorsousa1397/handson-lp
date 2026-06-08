@@ -1,12 +1,14 @@
 "use client";
+import { Home, Monitor, FlaskConical, Target, TrendingUp, Flame } from "lucide-react";
+
 export default function Para() {
   const profiles = [
-    { icon: "🏠", title: "Quer qualidade de vida", desc: "Cansado de pressão, hora extra e sem tempo para a família" },
-    { icon: "💻", title: "Quer trabalhar home office", desc: "Liberdade geográfica e trabalhar de onde quiser" },
-    { icon: "🧪", title: "Testador manual querendo crescer", desc: "Já atua na área mas quer evoluir para automação" },
-    { icon: "🎯", title: "Em busca do 1º emprego em TI", desc: "Quer começar ganhando bem, sem experiência prévia" },
-    { icon: "📈", title: "Não consegue ganhar mais", desc: "Quer dar um salto financeiro e sair da estagnação" },
-    { icon: "🔥", title: "Estagnado na carreira", desc: "Disposto a ser o agente de mudança da sua vida profissional" },
+    { Icon: Home,         color: "var(--purple-light)", title: "Quer qualidade de vida",          desc: "Cansado de pressão, hora extra e sem tempo para a família" },
+    { Icon: Monitor,      color: "var(--cyan)",          title: "Quer trabalhar home office",       desc: "Liberdade geográfica e trabalhar de onde quiser" },
+    { Icon: FlaskConical, color: "#a78bfa",              title: "Testador manual querendo crescer", desc: "Já atua na área mas quer evoluir para automação" },
+    { Icon: Target,       color: "var(--pink)",          title: "Em busca do 1º emprego em TI",     desc: "Quer começar ganhando bem, sem experiência prévia" },
+    { Icon: TrendingUp,   color: "#34d399",              title: "Não consegue ganhar mais",         desc: "Quer dar um salto financeiro e sair da estagnação" },
+    { Icon: Flame,        color: "#fb923c",              title: "Estagnado na carreira",            desc: "Disposto a ser o agente de mudança da sua vida profissional" },
   ];
   return (
     <section id="para-voce" style={{ padding: "5rem 0", position: "relative", zIndex: 2 }}>
@@ -19,9 +21,11 @@ export default function Para() {
           </h2>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "0.875rem" }}>
-          {profiles.map(({ icon, title, desc }) => (
+          {profiles.map(({ Icon, color, title, desc }) => (
             <div key={title} className="card" style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
-              <div style={{ fontSize: 24, flexShrink: 0, marginTop: 1 }}>{icon}</div>
+              <div style={{ flexShrink: 0, marginTop: 2 }}>
+                <Icon size={22} color={color} strokeWidth={1.75} />
+              </div>
               <div>
                 <div style={{ fontSize: 14, fontWeight: 600, fontFamily: "DM Sans, sans-serif", marginBottom: 4 }}>{title}</div>
                 <div style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.6 }}>{desc}</div>

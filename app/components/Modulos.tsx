@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Gift, Diamond } from "lucide-react";
 
 const modulos = [
   {
@@ -73,13 +73,13 @@ export default function Modulos() {
           <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
             <div style={{ background: "var(--card)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 18, padding: "1.5rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: "1rem" }}>
-                <span style={{ fontSize: 18 }}>🎁</span>
+                <Gift size={18} color="#fbbf24" strokeWidth={1.75} />
                 <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, color: "#fbbf24", fontSize: 14 }}>Bônus inclusos</span>
               </div>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
                 {bonus.map((b) => (
                   <div key={b} style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
-                    <span style={{ color: "#fbbf24", flexShrink: 0, marginTop: 2, fontSize: 13 }}>✦</span>
+                    <Diamond size={11} color="#fbbf24" fill="#fbbf24" strokeWidth={0} style={{ flexShrink: 0, marginTop: 3 }} />
                     <span style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.5 }}>{b}</span>
                   </div>
                 ))}
