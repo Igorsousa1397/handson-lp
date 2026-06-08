@@ -32,8 +32,8 @@ body {
 }
 
 @media (pointer: fine) {
-  body { cursor: none; }
-  button, a, [role="button"] { cursor: none !important; }
+  body:not(.checkout) { cursor: none; }
+  body:not(.checkout) button, body:not(.checkout) a, body:not(.checkout) [role="button"] { cursor: none !important; }
 }
 
 h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
