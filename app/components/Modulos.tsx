@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { ArrowRight, Gift, Diamond } from "lucide-react";
+import { ArrowRight, Gift, Diamond, Gem } from "lucide-react";
 
 const modulos = [
   {
@@ -72,11 +72,18 @@ export default function Modulos() {
           {/* Bonus + Tools */}
           <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
             <div style={{ background: "var(--card)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 18, padding: "1.5rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: "1rem" }}>
-                <Gift size={18} color="#fbbf24" strokeWidth={1.75} />
-                <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, color: "#fbbf24", fontSize: 14 }}>Bônus inclusos</span>
+              {/* Header bônus com badge Diamante */}
+              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem", flexWrap: "wrap", gap: 8 }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 7 }}>
+                  <Gift size={18} color="#fbbf24" strokeWidth={1.75} />
+                  <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 700, color: "#fbbf24", fontSize: 14 }}>Bônus inclusos</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 5, background: "rgba(103,232,249,0.08)", border: "1px solid rgba(103,232,249,0.25)", borderRadius: 100, padding: "3px 10px" }}>
+                  <Gem size={11} color="#67e8f9" strokeWidth={1.75} />
+                  <span style={{ fontSize: 11, fontWeight: 700, color: "#67e8f9", letterSpacing: "0.05em" }}>EXCLUSIVO DIAMANTE</span>
+                </div>
               </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
+              <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: "1rem" }}>
                 {bonus.map((b) => (
                   <div key={b} style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
                     <Diamond size={11} color="#fbbf24" fill="#fbbf24" strokeWidth={0} style={{ flexShrink: 0, marginTop: 3 }} />
@@ -84,6 +91,18 @@ export default function Modulos() {
                   </div>
                 ))}
               </div>
+              {/* CTA upgrade */}
+              <button onClick={() => window.location.href = "/checkout?plano=diamante"} style={{
+                width: "100%", padding: "11px", borderRadius: 100, border: "1px solid rgba(103,232,249,0.3)",
+                background: "rgba(103,232,249,0.06)", color: "#67e8f9",
+                fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer",
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 6,
+                transition: "all 0.2s",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.background = "rgba(103,232,249,0.12)"; }}
+              onMouseLeave={e => { e.currentTarget.style.background = "rgba(103,232,249,0.06)"; }}>
+                <Gem size={13} strokeWidth={1.75} /> Quero o Diamante com bônus
+              </button>
             </div>
             <div style={{ background: "var(--card)", border: "1px solid var(--border)", borderRadius: 14, padding: "1.25rem" }}>
               <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: 9, fontWeight: 600, letterSpacing: "0.07em", textTransform: "uppercase" }}>Ferramentas que você vai dominar</div>
