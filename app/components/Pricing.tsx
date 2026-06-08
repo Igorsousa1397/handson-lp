@@ -78,16 +78,8 @@ export default function Pricing() {
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "1rem" }}>
-          {plans.map(({ key, Icon, name, color, desc, price, badge, items, missing, cta, link, featured, dia }) => (
+          {plans.map(({ key, Icon, name, color, desc, price, items, missing, cta, link, featured, dia }) => (
             <div key={key} className={`price-card${featured ? " featured" : ""}${dia ? " dia" : ""}`}>
-
-              {/* Badge */}
-              {badge && (
-                <div style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: 11, padding: "3px 11px", borderRadius: 100, background: `${color}14`, color, border: `1px solid ${color}28`, marginBottom: "0.75rem" }}>
-                  <badge.Icon size={11} />
-                  {badge.label}
-                </div>
-              )}
 
               {/* Ícone + Nome */}
               <div style={{ marginBottom: "0.375rem" }}>
