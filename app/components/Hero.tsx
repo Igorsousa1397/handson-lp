@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const [val, setVal] = useState(0);
@@ -55,7 +56,7 @@ export default function Hero() {
           </p>
 
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "3.5rem", opacity: 0, animation: "fadeUp 0.6s ease 0.55s forwards" }}>
-            <button className="btn-primary" onClick={() => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" })}>Tenho interesse! →</button>
+            <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 6 }} onClick={() => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" })}>Tenho interesse! <ArrowRight size={15} strokeWidth={2.5} /></button>
             <button className="btn-outline" onClick={() => document.getElementById("modulos")?.scrollIntoView({ behavior: "smooth" })}>Ver como funciona</button>
           </div>
 

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ArrowRight, Plus, Minus } from "lucide-react";
 
 const faqs = [
   { q: "Preciso ter experiência em TI para entrar?", a: "Não. O curso foi feito para quem está começando do zero. Nossos alunos vêm das mais variadas áreas — eletricistas, motoristas, atendimento, auxiliar administrativo. Se você tem disposição, a Hands On te forma." },
@@ -28,7 +29,9 @@ export default function FAQ() {
                 padding: "1.125rem 0", background: "none", border: "none", cursor: "none", textAlign: "left", gap: "1rem"
               }}>
                 <span style={{ fontFamily: "DM Sans, sans-serif", fontWeight: 600, fontSize: 14, color: "var(--text-1)" }}>{q}</span>
-                <span style={{ color: "var(--purple-light)", fontSize: 18, flexShrink: 0, transition: "transform 0.3s", transform: open === i ? "rotate(45deg)" : "rotate(0)" }}>+</span>
+                <span style={{ color: "var(--purple-light)", flexShrink: 0, display: "flex" }}>
+                  {open === i ? <Minus size={16} strokeWidth={2} /> : <Plus size={16} strokeWidth={2} />}
+                </span>
               </button>
               <div className="faq-answer" style={{ maxHeight: open === i ? 200 : 0, opacity: open === i ? 1 : 0 }}>
                 <p style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.8, paddingBottom: "1.125rem" }}>{a}</p>
@@ -42,8 +45,8 @@ export default function FAQ() {
               <div style={{ fontSize: 10, color: "var(--pink)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.625rem", fontWeight: 700 }}>Última chamada</div>
               <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, marginBottom: "0.625rem", letterSpacing: "-0.02em" }}>Sua carreira começa hoje</h2>
               <p style={{ color: "var(--text-2)", marginBottom: "1.75rem", fontSize: 14 }}>Não deixe mais uma turma fechar sem você estar dentro.</p>
-              <button className="btn-primary" style={{ fontSize: 15, padding: "14px 36px" }} onClick={() => window.open("https://wa.me/5511963319196", "_blank")}>
-                Tenho interesse! →
+              <button className="btn-primary" style={{ fontSize: 15, padding: "14px 36px", display: "inline-flex", alignItems: "center", gap: 6 }} onClick={() => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" })}>
+                Tenho interesse! <ArrowRight size={15} strokeWidth={2.5} />
               </button>
               <div style={{ marginTop: "0.875rem", fontSize: 12, color: "var(--text-3)" }}>
                 Pix · Cartão em até 12x · Boleto · (11) 96331-9196

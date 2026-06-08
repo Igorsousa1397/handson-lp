@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { ArrowRight } from "lucide-react";
 
 const modulos = [
   {
@@ -97,7 +98,7 @@ export default function Modulos() {
 
         <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
           <button className="btn-primary" onClick={() => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" })}>
-            Quero aprender tudo isso →
+            Quero aprender tudo isso <ArrowRight size={14} strokeWidth={2.5} />
           </button>
         </div>
       </div>
