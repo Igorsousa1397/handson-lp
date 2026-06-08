@@ -120,7 +120,7 @@ export default function Pricing() {
               </div>
 
               {/* CTA */}
-              <button onClick={() => window.open(link, "_blank")} style={{
+              <button onClick={() => window.location.href = `/checkout?plano=${key}`} style={{
                 marginTop: "1.5rem", width: "100%", padding: "12px",
                 borderRadius: 100, cursor: "pointer",
                 border: featured ? "none" : `1px solid ${color}40`,

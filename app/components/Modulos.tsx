@@ -97,7 +97,7 @@ export default function Modulos() {
         </div>
 
         <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-          <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }} onClick={() => document.getElementById("planos")?.scrollIntoView({ behavior: "smooth" })}>
+          <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }} onClick={() => window.location.href = "/checkout"}>
             Quero aprender tudo isso <ArrowRight size={14} strokeWidth={2.5} />
           </button>
         </div>
