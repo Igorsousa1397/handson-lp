@@ -48,7 +48,7 @@ function PlanCard({ plan, mode }: { plan: typeof plans[0]; mode: "parcela" | "vi
       <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: "1.125rem", lineHeight: 1.5 }}>{desc}</div>
       <div style={{ marginBottom: "1.125rem" }}>
         <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: 1 }}>{mode === "parcela" ? "12x de" : "À vista por"}</div>
-        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(48px, 10vw, 64px)", fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
+        <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(36px, 4vw, 52px)", fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
           {mode === "parcela" ? <>R$<span>{price.parcela}</span></> : price.vista}
         </div>
         <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 3 }}>
