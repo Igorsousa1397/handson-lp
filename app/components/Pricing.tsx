@@ -72,8 +72,8 @@ export default function Pricing() {
                 <div style={{ fontSize: 11, color: "var(--text-3)", marginBottom: 1 }}>
                   {mode === "parcela" ? "12x de" : "À vista por"}
                 </div>
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(64px, 14vw, 72px)", fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
-                  {mode === "parcela" ? <>R$<span style={{ fontSize: "clamp(44px, 9vw, 52px)" }}>{price.parcela}</span></> : price.vista}
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(54px, 12vw, 72px)", fontWeight: 800, color: "var(--text-1)", lineHeight: 1 }}>
+                  {mode === "parcela" ? <>R$<span style={{ fontSize: "clamp(54px, 12vw, 72px)" }}>{price.parcela}</span></> : price.vista}
                 </div>
                 <div style={{ fontSize: 11, color: "var(--text-3)", marginTop: 3 }}>
                   {mode === "parcela" ? `ou ${price.vista} à vista` : `Equivale a 12x de R$${price.parcela}`}
