@@ -42,7 +42,7 @@ export default function FAQ() {
           <div style={{ marginTop: "4rem", textAlign: "center", padding: "2.5rem 2rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 20, position: "relative", overflow: "hidden" }}>
             <div className="orb animate-pulse-glow" style={{ width: 280, height: 280, background: "rgba(192,38,211,0.09)", top: "50%", left: "50%", transform: "translate(-50%,-50%)", filter: "blur(56px)" }} />
             <div style={{ position: "relative", zIndex: 1 }}>
-              <div style={{ fontSize: 10, color: "var(--pink)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.625rem", fontWeight: 700 }}>Última chamada</div>
+              <div style={{ fontSize: 14, color: "var(--pink)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.625rem", fontWeight: 700 }}>Última chamada</div>
               <h2 style={{ fontSize: "clamp(22px, 3vw, 34px)", fontWeight: 800, marginBottom: "0.625rem", letterSpacing: "-0.02em" }}>Sua carreira começa hoje</h2>
               <p style={{ color: "var(--text-2)", marginBottom: "1.75rem", fontSize: 14 }}>Não deixe mais uma turma fechar sem você estar dentro.</p>
               <button className="btn-primary" style={{ fontSize: 15, padding: "14px 36px", display: "inline-flex", alignItems: "center", gap: 6 }} onClick={() => window.location.href = "/checkout"}>
