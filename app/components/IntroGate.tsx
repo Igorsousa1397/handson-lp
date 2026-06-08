@@ -34,7 +34,8 @@ export default function IntroGate({ onClose }: { onClose: () => void }) {
     <div className="intro-gate" style={{
       position: "fixed", inset: 0, zIndex: 9999,
       background: "rgba(0,0,0,0.82)",
-      display: "flex", alignItems: "center", justifyContent: "center",
+      display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center",
+      gap: "1rem", padding: "1rem",
       opacity: closing ? 0 : 1,
       transition: "opacity 0.4s ease",
       backdropFilter: "blur(4px)",
@@ -91,7 +92,7 @@ export default function IntroGate({ onClose }: { onClose: () => void }) {
 
       {/* Container do vídeo */}
       <div style={{
-        width: "min(85vw, 900px)",
+        width: "min(90vw, 900px)",
         aspectRatio: "16/9",
         borderRadius: 16,
         overflow: "hidden",
@@ -99,6 +100,7 @@ export default function IntroGate({ onClose }: { onClose: () => void }) {
         boxShadow: "0 32px 80px rgba(0,0,0,0.6)",
         transform: closing ? "scale(0.95)" : "scale(1)",
         transition: "transform 0.4s ease",
+        flexShrink: 0,
       }}>
         {isReady ? (
           <iframe
