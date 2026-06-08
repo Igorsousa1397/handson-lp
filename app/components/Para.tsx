@@ -22,8 +22,8 @@ export default function Para() {
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "0.875rem" }}>
           {profiles.map(({ Icon, color, title, desc }) => (
-            <div key={title} className="card" style={{ display: "flex", gap: "0.875rem", alignItems: "flex-start" }}>
-              <div style={{ flexShrink: 0, marginTop: 2 }}>
+            <div key={title} className="card" style={{ display: "flex", gap: "0.875rem", alignItems: "center" }}>
+              <div style={{ flexShrink: 0 }}>
                 <Icon size={22} color={color} strokeWidth={1.75} />
               </div>
               <div>
