@@ -14,31 +14,24 @@ import Footer from "./components/Footer";
 import IntroGate from "./components/IntroGate";
 
 export default function Home() {
-  const [introDone, setIntroDone] = useState(false);
+  const [introClosed, setIntroClosed] = useState(false);
 
   return (
     <>
-      {!introDone && <IntroGate onComplete={() => setIntroDone(true)} />}
-
-      <div style={{
-        opacity: introDone ? 1 : 0,
-        transition: "opacity 0.6s ease",
-        pointerEvents: introDone ? "auto" : "none",
-      }}>
-        <Cursor />
-        <Nav />
-        <main>
-          <Hero />
-          <Marquee />
-          <Para />
-          <Founders />
-          <Modulos />
-          <Depoimentos />
-          <Pricing />
-          <FAQ />
-        </main>
-        <Footer />
-      </div>
+      {!introClosed && <IntroGate onClose={() => setIntroClosed(true)} />}
+      <Cursor />
+      <Nav />
+      <main>
+        <Hero />
+        <Marquee />
+        <Para />
+        <Founders />
+        <Modulos />
+        <Depoimentos />
+        <Pricing />
+        <FAQ />
+      </main>
+      <Footer />
     </>
   );
 }
