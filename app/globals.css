@@ -44,6 +44,14 @@ h1, h2, h3 { font-family: 'Barlow Condensed', sans-serif; }
   .checkout-grid { grid-template-columns: 1fr 340px; }
 }
 
+/* STATS FOUNDERS */
+.stats-desktop { display: none !important; }
+.stats-mobile  { display: block; }
+@media (min-width: 640px) {
+  .stats-desktop { display: grid !important; }
+  .stats-mobile  { display: none; }
+}
+
 /* CONTAINER */
 .container {
   max-width: var(--container);

@@ -77,7 +77,7 @@ export default function Pricing() {
           </div>
         </div>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "1rem" }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))", gap: "1rem" }}>
           {plans.map(({ key, Icon, name, color, desc, price, items, missing, cta, link, featured, dia }) => (
             <div key={key} className={`price-card${featured ? " featured" : ""}${dia ? " dia" : ""}`}>
 
