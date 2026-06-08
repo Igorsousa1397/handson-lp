@@ -102,7 +102,11 @@ function CheckoutContent() {
 
   return (
     <main style={{ minHeight: "100vh", background: "var(--bg)", padding: "0 0 80px" }} className="checkout-page">
-      <style>{`body { cursor: default !important; } body * { cursor: auto; } body button, body a { cursor: pointer !important; }`}</style>
+      <style>{`
+        .checkout-page, .checkout-page * { cursor: auto !important; }
+        .checkout-page button, .checkout-page a, .checkout-page select { cursor: pointer !important; }
+        .checkout-page input { cursor: text !important; }
+      `}</style>
       {/* Nav */}
       <div style={{ borderBottom: "1px solid var(--border)", padding: "16px 0", position: "sticky", top: 0, background: "var(--bg)", zIndex: 100 }}>
         <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
