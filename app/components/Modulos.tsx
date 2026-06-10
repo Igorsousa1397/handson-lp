@@ -92,7 +92,7 @@ export default function Modulos() {
                 ))}
               </div>
               {/* CTA upgrade */}
-              <button onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")} style={{
+              <button onClick={() => window.open("https://pay.kiwify.com.br/zozMu7q", "_blank")} style={{
                 width: "100%", padding: "11px", borderRadius: 100, border: "1px solid rgba(103,232,249,0.3)",
                 background: "rgba(103,232,249,0.06)", color: "#67e8f9",
                 fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer",
