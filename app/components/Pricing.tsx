@@ -36,6 +36,8 @@ const KIWIFY_LINKS = {
   ouro:     "https://pay.kiwify.com.br/oS1SdyF",
   diamante: "https://pay.kiwify.com.br/zozMu7q",
 };
+
+const guarantees = [
   { Icon: CreditCard, label: "12x sem juros" },
   { Icon: Zap,        label: "Pix à vista" },
   { Icon: Banknote,   label: "Boleto" },
