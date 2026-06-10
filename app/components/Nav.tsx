@@ -31,7 +31,7 @@ export default function Nav() {
             onMouseLeave={e => (e.currentTarget.style.color = "var(--text-2)")}
             >{l}</a>
           ))}
-          <button className="btn-primary" style={{ padding: "9px 20px", fontSize: 13 }} onClick={() => window.location.href = "/checkout"}>
+          <button className="btn-primary" style={{ padding: "9px 20px", fontSize: 13 }} onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")}>
             Tenho interesse!
           </button>
         </div>

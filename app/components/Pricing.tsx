@@ -31,7 +31,11 @@ const plans = [
   },
 ];
 
-const guarantees = [
+const KIWIFY_LINKS = {
+  prata:    "https://wa.me/5511963319196?text=Quero+o+Plano+Prata", // SUBSTITUIR quando criar no Kiwify
+  ouro:     "https://pay.kiwify.com.br/oS1SdyF",
+  diamante: "https://wa.me/5511963319196?text=Quero+o+Plano+Diamante", // SUBSTITUIR quando criar no Kiwify
+};
   { Icon: CreditCard, label: "12x sem juros" },
   { Icon: Zap,        label: "Pix à vista" },
   { Icon: Banknote,   label: "Boleto" },
@@ -70,7 +74,7 @@ function PlanCard({ plan, mode }: { plan: typeof plans[0]; mode: "parcela" | "vi
           </div>
         ))}
       </div>
-      <button onClick={() => window.location.href = `/checkout?plano=${key}`} style={{
+      <button onClick={() => window.open(KIWIFY_LINKS[key as keyof typeof KIWIFY_LINKS], "_blank")} style={{
         marginTop: "1.5rem", width: "100%", padding: "12px", borderRadius: 100, cursor: "pointer",
         border: featured ? "none" : `1px solid ${color}40`,
         background: featured ? "var(--pink)" : "transparent",

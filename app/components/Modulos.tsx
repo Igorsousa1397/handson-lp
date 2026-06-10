@@ -92,7 +92,7 @@ export default function Modulos() {
                 ))}
               </div>
               {/* CTA upgrade */}
-              <button onClick={() => window.location.href = "/checkout?plano=diamante"} style={{
+              <button onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")} style={{
                 width: "100%", padding: "11px", borderRadius: 100, border: "1px solid rgba(103,232,249,0.3)",
                 background: "rgba(103,232,249,0.06)", color: "#67e8f9",
                 fontFamily: "DM Sans, sans-serif", fontWeight: 700, fontSize: 13, cursor: "pointer",
@@ -116,7 +116,7 @@ export default function Modulos() {
         </div>
 
         <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
-          <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }} onClick={() => window.location.href = "/checkout"}>
+          <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }} onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")}>
             Quero aprender tudo isso <ArrowRight size={14} strokeWidth={2.5} />
           </button>
         </div>

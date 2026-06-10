@@ -56,7 +56,7 @@ export default function Hero() {
           </p>
 
           <div style={{ display: "flex", gap: "0.75rem", flexWrap: "wrap", marginBottom: "3.5rem", opacity: 0, animation: "fadeUp 0.6s ease 0.55s forwards" }}>
-            <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 6 }} onClick={() => window.location.href = "/checkout"}>Tenho interesse! <ArrowRight size={15} strokeWidth={2.5} /></button>
+            <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 6 }} onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")}>Tenho interesse! <ArrowRight size={15} strokeWidth={2.5} /></button>
             <button className="btn-outline" onClick={() => document.getElementById("modulos")?.scrollIntoView({ behavior: "smooth" })}>Ver como funciona</button>
           </div>
 
