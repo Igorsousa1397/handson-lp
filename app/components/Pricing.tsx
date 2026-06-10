@@ -6,7 +6,7 @@ const plans = [
   {
     key: "prata", Icon: Shield, name: "Prata", color: "#94a3b8",
     desc: "Módulo I — Teoria e Testes Manuais",
-    price: { parcela: "247,50", vista: "R$2.970,00" },
+    price: { parcela: "307,17", vista: "R$2.970,00" },
     items: ["Fundamentos da Qualidade de Software","Estratégias e tipos de teste","Metodologias Ágeis (SDLC / STLC)","Testes manuais na prática","Mentalidade do QA","Plataforma com aulas gravadas"],
     missing: ["Automação de testes","Aulas ao vivo (Live)","Mentoria 1:1 com Sostenes","Comunidade + Bônus"],
     cta: "Escolher Prata",
@@ -14,7 +14,7 @@ const plans = [
   {
     key: "ouro", Icon: Award, name: "Ouro", color: "#fbbf24",
     desc: "Módulo II — Testes Manuais + Automação + Live",
-    price: { parcela: "289,16", vista: "R$3.470,00" },
+    price: { parcela: "358,88", vista: "R$3.470,00" },
     items: ["Tudo do Prata","Lógica de Programação + Java","Automação de testes (Selenium)","Testes de API (Postman)","CI/CD + Acessibilidade Mobile","Aulas ao vivo (Live)","Preparação para entrevistas","LinkedIn e currículo"],
     missing: ["Mentoria 1:1 com Sostenes","Comunidade + Bônus"],
     cta: "Garantir Ouro",
@@ -23,7 +23,7 @@ const plans = [
   {
     key: "diamante", Icon: Gem, name: "Diamante", color: "#67e8f9",
     desc: "Módulo III — Completo + Live + Comunidade + Bônus + 1:1",
-    price: { parcela: "330,83", vista: "R$3.970,00" },
+    price: { parcela: "410,59", vista: "R$3.970,00" },
     items: ["Tudo do Ouro","Mentoria 1:1 com o Sostenes","Simulação de entrevista real com feedback","Comunidade exclusiva","Indicação direta de vagas","IA aplicada a testes","Todos os bônus inclusos","Atualização constante da plataforma"],
     missing: [],
     cta: "Escolher Diamante",
@@ -38,7 +38,7 @@ const KIWIFY_LINKS = {
 };
 
 const guarantees = [
-  { Icon: CreditCard, label: "12x sem juros" },
+  { Icon: CreditCard, label: "12x no cartão" },
   { Icon: Zap,        label: "Pix à vista" },
   { Icon: Banknote,   label: "Boleto" },
   { Icon: Lock,       label: "Pagamento seguro" },
@@ -121,7 +121,7 @@ export default function Pricing() {
         <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <span className="tag tag-amber" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Investimento</span>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>Escolha seu plano</h2>
-          <p style={{ color: "var(--text-2)", marginTop: "0.5rem", fontSize: 14 }}>Todos com parcelamento em até 12x sem juros no cartão</p>
+          <p style={{ color: "var(--text-2)", marginTop: "0.5rem", fontSize: 14 }}>Todos com parcelamento em até 12x no cartão com juros</p>
           <div style={{ display: "inline-flex", gap: 3, marginTop: "1.25rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 100, padding: 3 }}>
             {(["parcela", "vista"] as const).map(m => (
               <button key={m} onClick={() => setMode(m)} style={{
@@ -129,7 +129,7 @@ export default function Pricing() {
                 background: mode === m ? "var(--purple)" : "transparent",
                 color: mode === m ? "#fff" : "var(--text-2)",
                 fontFamily: "DM Sans, sans-serif", fontWeight: 500, fontSize: 12, transition: "all 0.2s",
-              }}>{m === "parcela" ? "12x sem juros" : "À vista"}</button>
+              }}>{m === "parcela" ? "12x no cartão" : "À vista"}</button>
             ))}
           </div>
         </div>
