@@ -6,8 +6,8 @@ import { Play, X, Star } from "lucide-react";
 const videos = [
   {
     id: 1,
-    cloudflareId: "TODO_VIDEO_ID_1", // ex: "ea95132c15732419d86c"
-    thumbnail: null, // Cloudflare gera thumbnail automático após upload
+    cloudflareId: "08b78b236551e0c6a2c6fed1ae4dd3d5",
+    thumbnail: null,
     nome: "Aluno empregado",
     role: "QA Analyst",
     empresa: "Sicredi",
@@ -16,7 +16,7 @@ const videos = [
   },
   {
     id: 2,
-    cloudflareId: "TODO_VIDEO_ID_2",
+    cloudflareId: "4adbc120b7d3ddb9b4f8a06ab15689e3",
     thumbnail: null,
     nome: "Aluno empregado",
     role: "QA Consultant",
