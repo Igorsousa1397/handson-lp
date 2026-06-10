@@ -32,7 +32,7 @@ const plans = [
 ];
 
 const KIWIFY_LINKS = {
-  prata:    "https://wa.me/5511963319196?text=Quero+o+Plano+Prata", // SUBSTITUIR quando criar no Kiwify
+  prata:    "https://pay.kiwify.com.br/0GMs92A",
   ouro:     "https://pay.kiwify.com.br/oS1SdyF",
   diamante: "https://wa.me/5511963319196?text=Quero+o+Plano+Diamante", // SUBSTITUIR quando criar no Kiwify
 };
