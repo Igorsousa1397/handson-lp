@@ -24,26 +24,6 @@ const videos = [
     cor: "#0e4f6e",
     initials: "N",
   },
-  {
-    id: 3,
-    cloudflareId: "TODO_VIDEO_ID_3",
-    thumbnail: null,
-    nome: "Aluno empregado",
-    role: "QA Engineer",
-    empresa: "Tecnologia",
-    cor: "#065f46",
-    initials: "C",
-  },
-  {
-    id: 4,
-    cloudflareId: "TODO_VIDEO_ID_4",
-    thumbnail: null,
-    nome: "Aluno empregado",
-    role: "QA Tester",
-    empresa: "Consultoria",
-    cor: "#7c2d12",
-    initials: "R",
-  },
 ];
 
 function Thumbnail({ video, onClick }: { video: typeof videos[0]; onClick: () => void }) {
