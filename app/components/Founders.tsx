@@ -34,26 +34,17 @@ export default function Founders() {
               <span style={{ color: "var(--cyan-light)" }}>a história real do Instituto</span>
             </h2>
 
-            {/* Fotos dos founders */}
-            <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", justifyContent: "center", alignItems: "flex-end" }}>
-              {[
-                { src: "/sostenes.png", name: "Sostenes", role: "Co-fundador & Mentor" },
-                { src: "/daniel.png",   name: "Daniel",   role: "Co-fundador & Instrutor" },
-              ].map(({ src, name, role }) => (
-                <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, flex: 1, maxWidth: 220 }}>
-                  <div style={{
-                    width: "100%", borderRadius: 16, overflow: "hidden",
-                    border: "1px solid var(--border)",
-                    background: "linear-gradient(135deg, rgba(6,182,212,0.08), var(--card))",
-                  }}>
-                    <img src={src} alt={name} style={{ width: "100%", height: "auto", display: "block" }} />
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 18, fontWeight: 800, color: "var(--text-1)" }}>{name}</div>
-                    <div style={{ fontSize: 12, color: "var(--text-3)" }}>{role}</div>
-                  </div>
+            {/* Foto do Daniel */}
+            <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", justifyContent: "flex-start", alignItems: "flex-end" }}>
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, maxWidth: 220 }}>
+                <div style={{ width: "100%", borderRadius: 16, overflow: "hidden", border: "1px solid var(--border)", background: "linear-gradient(135deg, rgba(6,182,212,0.08), var(--card))" }}>
+                  <img src="/daniel.png" alt="Daniel" style={{ width: "100%", height: "auto", display: "block" }} />
                 </div>
-              ))}
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 18, fontWeight: 800, color: "var(--text-1)" }}>Daniel</div>
+                  <div style={{ fontSize: 12, color: "var(--text-3)" }}>Co-fundador & Instrutor</div>
+                </div>
+              </div>
             </div>
           </div>
 
