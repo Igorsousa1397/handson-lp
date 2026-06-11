@@ -37,8 +37,8 @@ export default function Founders() {
             {/* Fotos dos founders */}
             <div style={{ display: "flex", gap: "1.5rem", marginTop: "2rem", justifyContent: "center", alignItems: "flex-end" }}>
               {[
-                { src: "/daniel.png",   name: "Daniel",   role: "Co-fundador & Instrutor" },
                 { src: "/sostenes.png", name: "Sostenes", role: "Co-fundador & Mentor" },
+                { src: "/daniel.png",   name: "Daniel",   role: "Co-fundador & Instrutor" },
               ].map(({ src, name, role }) => (
                 <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, flex: 1, maxWidth: 220 }}>
                   <div style={{
