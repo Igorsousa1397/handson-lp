@@ -41,8 +41,8 @@ export default function Founders() {
                 { src: "/daniel.png",   name: "Daniel",   role: "Co-fundador & Instrutor" },
               ].map(({ src, name, role }) => (
                 <div key={name} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10, flex: 1, maxWidth: 220 }}>
-                  <div style={{ width: "100%", borderRadius: 16, overflow: "hidden", border: "1px solid var(--border)", background: "linear-gradient(135deg, rgba(6,182,212,0.08), var(--card))" }}>
-                    <img src={src} alt={name} style={{ width: "100%", height: "auto", display: "block" }} />
+                  <div style={{ width: "100%", aspectRatio: "4/5", borderRadius: 16, overflow: "hidden", border: "1px solid var(--border)", background: "linear-gradient(135deg, rgba(6,182,212,0.08), var(--card))" }}>
+                    <img src={src} alt={name} style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", display: "block" }} />
                   </div>
                   <div style={{ textAlign: "center" }}>
                     <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 18, fontWeight: 800, color: "var(--text-1)" }}>{name}</div>
