@@ -1,4 +1,12 @@
-import { MessageCircle, Instagram } from "lucide-react";
+import { MessageCircle } from "lucide-react";
+
+const InstagramIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c026d3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+    <circle cx="12" cy="12" r="4"/>
+    <circle cx="17.5" cy="6.5" r="1" fill="#c026d3" stroke="none"/>
+  </svg>
+);
 
 export default function Footer() {
   return (
@@ -17,7 +25,7 @@ export default function Footer() {
             </a>
             <a href="https://www.instagram.com/handsoninstituto/" target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "var(--text-2)", textDecoration: "none" }}>
-              <Instagram size={15} color="#c026d3" />
+              <InstagramIcon />
               @handsoninstituto
             </a>
           </div>
