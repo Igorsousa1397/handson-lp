@@ -13,12 +13,15 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 import IntroGate from "./components/IntroGate";
 
+// Desligado até o vídeo de abertura do Sostenes existir — ligue quando tiver o ID no IntroGate.tsx
+const INTRO_ENABLED = false;
+
 export default function Home() {
   const [introClosed, setIntroClosed] = useState(false);
 
   return (
     <>
-      {!introClosed && <IntroGate onClose={() => setIntroClosed(true)} />}
+      {INTRO_ENABLED && !introClosed && <IntroGate onClose={() => setIntroClosed(true)} />}
       <Cursor />
       <Nav />
       <main>
