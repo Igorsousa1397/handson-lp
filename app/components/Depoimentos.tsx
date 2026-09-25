@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Play, X, Star } from "lucide-react";
+import Reveal from "./Reveal";
 
 // ─── Vídeos em public/videos/ (verticais 9:16, comprimidos com ffmpeg) ───
 const videos = [
@@ -108,18 +109,20 @@ export default function Depoimentos() {
   return (
     <section id="resultados" style={{ padding: "5rem 0", background: "var(--surface)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", position: "relative", zIndex: 2 }}>
       <div className="container">
-        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <Reveal style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="tag tag-purple" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Transformações reais</span>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
             O que nossos alunos dizem
           </h2>
           <p style={{ color: "var(--text-3)", marginTop: "0.5rem", fontSize: 13 }}>depoimentos reais em vídeo</p>
-        </div>
+        </Reveal>
 
         {/* Grid de thumbnails verticais */}
         <div className="depo-grid">
-          {videos.map(v => (
-            <Thumbnail key={v.id} video={v} onClick={() => setModalVideo(v)} />
+          {videos.map((v, i) => (
+            <Reveal key={v.id} delay={i * 120}>
+              <Thumbnail video={v} onClick={() => setModalVideo(v)} />
+            </Reveal>
           ))}
         </div>
       </div>

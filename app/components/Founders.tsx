@@ -1,11 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import Counter from "./Counter";
+import Reveal from "./Reveal";
 
 const stats = [
-  { n: "+200", l: "Alunos formados" },
-  { n: "+50",  l: "Transições de carreira" },
-  { n: "6 meses", l: "Do zero ao emprego" },
-  { n: "R$4–20k", l: "Faixa salarial" },
+  { prefix: "+", n: 200, suffix: "", l: "Alunos formados" },
+  { prefix: "+", n: 50,  suffix: "", l: "Transições de carreira" },
+  { prefix: "", n: 6, suffix: " meses", l: "Do zero ao emprego" },
+  { prefix: "R$4–", n: 20, suffix: "k", l: "Faixa salarial" },
 ];
 
 const steps = [
@@ -71,7 +73,7 @@ export default function Founders() {
         <div className="founders-grid">
           <FounderShot />
 
-          <div>
+          <Reveal>
             <span className="tag tag-cyan" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Quem está por trás</span>
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", marginBottom: "2rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
               Sostenes e Daniel
@@ -95,16 +97,16 @@ export default function Founders() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
         </div>
 
         {/* Stats */}
-        <div style={{ marginTop: "3rem" }}>
+        <Reveal style={{ marginTop: "3rem" }}>
           {/* Desktop — lado a lado */}
           <div className="stats-desktop" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "0.75rem" }}>
-            {stats.map(({ n, l }) => (
+            {stats.map(({ prefix, n, suffix, l }) => (
               <div key={l} style={{ padding: "1.25rem 1rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 12, textAlign: "center" }}>
-                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, color: "var(--text-1)", marginBottom: 4 }}>{n}</div>
+                <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(24px, 3vw, 34px)", fontWeight: 800, color: "var(--text-1)", marginBottom: 4 }}><Counter end={n} prefix={prefix} suffix={suffix} /></div>
                 <div style={{ fontSize: 12, color: "var(--text-3)", lineHeight: 1.4 }}>{l}</div>
               </div>
             ))}
@@ -116,8 +118,8 @@ export default function Founders() {
               padding: "1.75rem 1.5rem", background: "var(--card)", border: "1px solid var(--border)",
               borderRadius: 16, textAlign: "center", transition: "all 0.4s ease",
             }}>
-              <div style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 52, fontWeight: 800, color: "var(--text-1)", lineHeight: 1, marginBottom: 6 }}>
-                {stats[active].n}
+              <div key={active} style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 52, fontWeight: 800, color: "var(--text-1)", lineHeight: 1, marginBottom: 6 }}>
+                <Counter end={stats[active].n} prefix={stats[active].prefix} suffix={stats[active].suffix} duration={700} />
               </div>
               <div style={{ fontSize: 14, color: "var(--text-3)" }}>{stats[active].l}</div>
             </div>
@@ -133,7 +135,7 @@ export default function Founders() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
 
       </div>
     </section>

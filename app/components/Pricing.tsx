@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 import { Shield, Zap, Check, X, CreditCard, Banknote, Lock, RotateCcw, Award, Gem, ArrowRight } from "lucide-react";
+import Reveal from "./Reveal";
 
 const plans = [
   {
@@ -118,7 +119,7 @@ export default function Pricing() {
   return (
     <section id="planos" style={{ padding: "5rem 0", position: "relative", zIndex: 2 }}>
       <div className="container">
-        <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+        <Reveal style={{ textAlign: "center", marginBottom: "2.5rem" }}>
           <span className="tag tag-amber" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Investimento</span>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>Escolha seu plano</h2>
           <p style={{ color: "var(--text-2)", marginTop: "0.5rem", fontSize: 14 }}>Todos com parcelamento em até 12x no cartão</p>
@@ -132,11 +133,11 @@ export default function Pricing() {
               }}>{m === "parcela" ? "12x no cartão" : "À vista"}</button>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         {/* Desktop — 3 colunas fixas */}
         <div className="pricing-desktop" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "1rem" }}>
-          {plans.map(p => <PlanCard key={p.key} plan={p} mode={mode} />)}
+          {plans.map((p, i) => <Reveal key={p.key} delay={i * 120} style={{ height: "100%" }}><PlanCard plan={p} mode={mode} /></Reveal>)}
         </div>
 
         {/* Mobile — carrossel */}
@@ -168,13 +169,13 @@ export default function Pricing() {
         </div>
 
         {/* Garantias */}
-        <div style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid var(--border)" }}>
+        <Reveal delay={200} style={{ display: "flex", justifyContent: "center", gap: "1.75rem", flexWrap: "wrap", marginTop: "2rem", paddingTop: "2rem", borderTop: "1px solid var(--border)" }}>
           {guarantees.map(({ Icon, label }) => (
             <div key={label} style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "var(--text-3)" }}>
               <Icon size={13} strokeWidth={1.5} /> {label}
             </div>
           ))}
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight, Gift, Diamond, Gem } from "lucide-react";
+import Reveal from "./Reveal";
 
 const modulos = [
   {
@@ -30,16 +31,16 @@ export default function Modulos() {
   return (
     <section id="modulos" style={{ padding: "5rem 0", position: "relative", zIndex: 2 }}>
       <div className="container">
-        <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+        <Reveal style={{ textAlign: "center", marginBottom: "3rem" }}>
           <span className="tag tag-purple" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Conteúdo programático</span>
           <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>
             3 módulos do zero<br />
             <span style={{ color: "var(--purple-light)" }}>ao avançado</span>
           </h2>
-        </div>
+        </Reveal>
 
         {/* Tabs */}
-        <div style={{ display: "flex", gap: "0.5rem", marginBottom: "2rem", flexWrap: "wrap" }}>
+        <Reveal delay={100} style={{ display: "flex", gap: "0.5rem", marginBottom: "2rem", flexWrap: "wrap" }}>
           {modulos.map(({ badge, color }, i) => (
             <button key={i} onClick={() => setActive(i)} style={{
               padding: "7px 18px", borderRadius: 100, cursor: "none",
@@ -50,16 +51,16 @@ export default function Modulos() {
               transition: "all 0.2s"
             }}>{badge}</button>
           ))}
-        </div>
+        </Reveal>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", gap: "1.5rem", alignItems: "start" }}>
           {/* Module */}
-          <div style={{ background: "var(--card)", border: `1px solid ${mod.color}35`, borderRadius: 18, padding: "1.75rem", transition: "all 0.3s" }}>
-            <div style={{ fontSize: 10, color: mod.color, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 7 }}>{mod.badge}</div>
-            <h3 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 22, fontWeight: 800, marginBottom: "1.25rem", color: mod.color }}>{mod.title}</h3>
-            <div style={{ display: "flex", flexDirection: "column", gap: 9 }}>
-              {mod.items.map((item) => (
-                <div key={item} style={{ display: "flex", gap: 9, alignItems: "flex-start" }}>
+          <Reveal delay={150} style={{ background: "var(--card)", border: `1px solid ${mod.color}35`, borderRadius: 18, padding: "1.75rem", transition: "border-color 0.4s ease, opacity 0.7s ease, transform 0.7s ease" }}>
+            <div style={{ fontSize: 10, color: mod.color, fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", marginBottom: 7, transition: "color 0.4s" }}>{mod.badge}</div>
+            <h3 key={active} className="mod-item" style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: 22, fontWeight: 800, marginBottom: "1.25rem", color: mod.color }}>{mod.title}</h3>
+            <div key={`list-${active}`} style={{ display: "flex", flexDirection: "column", gap: 9 }}>
+              {mod.items.map((item, i) => (
+                <div key={item} className="mod-item" style={{ display: "flex", gap: 9, alignItems: "flex-start", animationDelay: `${60 + i * 45}ms` }}>
                   <div style={{ width: 16, height: 16, borderRadius: "50%", background: `${mod.color}18`, border: `1px solid ${mod.color}35`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>
                     <div style={{ width: 5, height: 5, borderRadius: "50%", background: mod.color }} />
                   </div>
@@ -67,10 +68,10 @@ export default function Modulos() {
                 </div>
               ))}
             </div>
-          </div>
+          </Reveal>
 
           {/* Bonus + Tools */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
+          <Reveal delay={250} style={{ display: "flex", flexDirection: "column", gap: "0.875rem" }}>
             <div style={{ background: "var(--card)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 18, padding: "1.5rem" }}>
               {/* Header bônus com badge Diamante */}
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem", flexWrap: "wrap", gap: 8 }}>
@@ -112,14 +113,14 @@ export default function Modulos() {
                 ))}
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
 
-        <div style={{ marginTop: "2.5rem", textAlign: "center" }}>
+        <Reveal delay={200} style={{ marginTop: "2.5rem", textAlign: "center" }}>
           <button className="btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }} onClick={() => window.open("https://pay.kiwify.com.br/oS1SdyF", "_blank")}>
             Quero aprender tudo isso <ArrowRight size={14} strokeWidth={2.5} />
           </button>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

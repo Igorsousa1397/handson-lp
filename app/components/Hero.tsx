@@ -1,29 +1,8 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
 import { ArrowRight } from "lucide-react";
 import Typewriter from "./Typewriter";
 import TestRunner from "./TestRunner";
-
-function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
-  const [val, setVal] = useState(0);
-  const ref = useRef<HTMLSpanElement>(null);
-  useEffect(() => {
-    const obs = new IntersectionObserver(([e]) => {
-      if (!e.isIntersecting) return;
-      obs.disconnect();
-      let cur = 0;
-      const step = end / 50;
-      const t = setInterval(() => {
-        cur += step;
-        if (cur >= end) { setVal(end); clearInterval(t); }
-        else setVal(Math.floor(cur));
-      }, 20);
-    });
-    if (ref.current) obs.observe(ref.current);
-    return () => obs.disconnect();
-  }, [end]);
-  return <span ref={ref}>{val}{suffix}</span>;
-}
+import Counter from "./Counter";
 
 export default function Hero() {
   return (

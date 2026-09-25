@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight, Plus, Minus, Flame } from "lucide-react";
+import Reveal from "./Reveal";
 
 const faqs = [
   { q: "Preciso ter experiência em TI para entrar?", a: "Não. O curso foi feito para quem está começando do zero. Nossos alunos vêm das mais variadas áreas — eletricistas, motoristas, atendimento, auxiliar administrativo. Se você tem disposição, a Hands On te forma." },
@@ -17,13 +18,13 @@ export default function FAQ() {
     <section style={{ padding: "5rem 0", background: "var(--surface)", borderTop: "1px solid var(--border)", position: "relative", zIndex: 2 }}>
       <div className="container">
         <div style={{ maxWidth: 660, margin: "0 auto" }}>
-          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+          <Reveal style={{ textAlign: "center", marginBottom: "3rem" }}>
             <span className="tag tag-purple" style={{ marginBottom: "0.875rem", display: "inline-flex" }}>Perguntas frequentes</span>
             <h2 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(34px, 5vw, 58px)", fontWeight: 800, marginTop: "0.75rem", letterSpacing: "-0.01em", lineHeight: 1.05 }}>Ainda tem dúvidas?</h2>
-          </div>
+          </Reveal>
 
           {faqs.map(({ q, a }, i) => (
-            <div key={i} className="faq-item">
+            <Reveal key={i} delay={i * 60} className="faq-item">
               <button onClick={() => setOpen(open === i ? null : i)} style={{
                 width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center",
                 padding: "1.125rem 0", background: "none", border: "none", cursor: "none", textAlign: "left", gap: "1rem"
@@ -36,10 +37,10 @@ export default function FAQ() {
               <div className="faq-answer" style={{ maxHeight: open === i ? 200 : 0, opacity: open === i ? 1 : 0 }}>
                 <p style={{ fontSize: 13, color: "var(--text-2)", lineHeight: 1.8, paddingBottom: "1.125rem" }}>{a}</p>
               </div>
-            </div>
+            </Reveal>
           ))}
 
-          <div style={{ marginTop: "4rem", textAlign: "center", padding: "2.5rem 2rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 20, position: "relative", overflow: "hidden" }}>
+          <Reveal style={{ marginTop: "4rem", textAlign: "center", padding: "2.5rem 2rem", background: "var(--card)", border: "1px solid var(--border)", borderRadius: 20, position: "relative", overflow: "hidden" }}>
             <div className="orb animate-pulse-glow" style={{ width: 280, height: 280, background: "rgba(192,38,211,0.09)", top: "50%", left: "50%", transform: "translate(-50%,-50%)", filter: "blur(56px)" }} />
             <div style={{ position: "relative", zIndex: 1 }}>
               <div style={{ fontSize: 14, color: "var(--pink)", letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: "0.625rem", fontWeight: 700, display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}>
@@ -54,7 +55,7 @@ export default function FAQ() {
                 Pix · Cartão em até 12x · Boleto
               </div>
             </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
