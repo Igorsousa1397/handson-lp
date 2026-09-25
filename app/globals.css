@@ -369,3 +369,38 @@ section { position: relative; z-index: 2; }
   .founder-card-a { transform: rotate(-6deg); }
   .founder-card-b { transform: rotate(5deg); }
 }
+
+/* DEPOIMENTOS — cards verticais */
+.depo-grid {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 260px));
+  justify-content: center; gap: 1.25rem;
+}
+@media (max-width: 480px) {
+  .depo-grid { gap: 0.75rem; }
+}
+.depo-thumb {
+  position: relative; width: 100%; aspect-ratio: 9 / 16; padding: 0;
+  border-radius: 16px; overflow: hidden; cursor: pointer;
+  border: 1px solid var(--border-2); background: var(--card);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.depo-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s ease; }
+.depo-thumb:hover { transform: translateY(-4px); border-color: rgba(167,139,250,0.45); box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px rgba(124,58,237,0.18); }
+.depo-thumb:hover img { transform: scale(1.04); }
+.depo-thumb:focus-visible { outline: 2px solid var(--purple-light); outline-offset: 3px; }
+.depo-play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 54px; height: 54px; border-radius: 50%;
+  background: rgba(192,38,211,0.85); border: 1px solid rgba(255,255,255,0.3);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 0 rgba(192,38,211,0.5);
+  animation: playPulse 2.4s ease-out infinite;
+}
+@keyframes playPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(192,38,211,0.5); }
+  70%  { box-shadow: 0 0 0 16px rgba(192,38,211,0); }
+  100% { box-shadow: 0 0 0 0 rgba(192,38,211,0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .depo-play { animation: none; }
+}
