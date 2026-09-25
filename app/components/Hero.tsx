@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import Typewriter from "./Typewriter";
+import TestRunner from "./TestRunner";
 
 function Counter({ end, suffix = "" }: { end: number; suffix?: string }) {
   const [val, setVal] = useState(0);
@@ -28,7 +30,8 @@ export default function Hero() {
     <section id="hero" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "100px 0 80px", position: "relative", overflow: "hidden" }}>
       {/* orbs */}
       <div className="orb animate-pulse-glow" style={{ width: 500, height: 500, background: "rgba(124,58,237,0.11)", top: -160, right: -80 }} />
-      <div className="orb animate-pulse-glow" style={{ width: 350, height: 350, background: "rgba(192,38,211,0.07)", bottom: -80, left: -60, animationDelay: "2s" }} />
+      {/* grade de pontos — fundo tech */}
+      <div className="hero-grid" />
       {/* scan line */}
       <div style={{ position: "absolute", left: 0, right: 0, height: "1px", background: "linear-gradient(90deg,transparent,rgba(124,58,237,0.3),transparent)", animation: "scan 10s linear infinite", pointerEvents: "none" }} />
 
@@ -43,7 +46,7 @@ export default function Hero() {
 
           <h1 style={{ fontFamily: "'Barlow Condensed', sans-serif", fontSize: "clamp(48px, 7vw, 88px)", fontWeight: 800, lineHeight: 1.0, letterSpacing: "-0.01em", marginBottom: "1.25rem", opacity: 0, animation: "fadeUp 0.6s ease 0.2s forwards" }}>
             Torne-se um{" "}
-            <span style={{ color: "var(--pink-light)" }} className="glow-pink">Testador de Software</span>
+            <Typewriter text="Testador de Software" className="glow-pink" style={{ color: "var(--pink-light)" }} />
             <span style={{ color: "var(--text-2)", fontWeight: 600, fontSize: "0.72em", display: "block", marginTop: "0.05em" }}>em 6 meses.</span>
           </h1>
 
@@ -74,6 +77,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
+        <TestRunner />
       </div>
     </section>
   );

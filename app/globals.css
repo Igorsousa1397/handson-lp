@@ -236,3 +236,54 @@ section { position: relative; z-index: 2; }
   .hide-mobile { display: none !important; }
   .price-card { padding: 1.25rem; }
 }
+
+/* HERO — animação QA */
+.hero-grid {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image: radial-gradient(rgba(167,139,250,0.22) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, #000 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 70% at 60% 40%, #000 0%, transparent 70%);
+}
+.type-caret {
+  display: inline-block; width: 0.08em; height: 0.85em;
+  background: var(--pink-light); margin-left: 0.04em; vertical-align: -0.05em;
+  animation: blink 0.9s steps(2, start) infinite;
+  box-shadow: 0 0 12px rgba(232,121,249,0.8);
+}
+.term-caret {
+  display: inline-block; width: 7px; height: 13px; vertical-align: middle;
+  background: var(--purple-light); animation: blink 1s steps(2, start) infinite;
+}
+@keyframes blink { to { visibility: hidden; } }
+
+.hero-terminal {
+  background: rgba(14,14,26,0.82); border: 1px solid var(--border-2); border-radius: 14px;
+  backdrop-filter: blur(12px); overflow: hidden; width: 100%; max-width: 420px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(124,58,237,0.08), 0 0 60px rgba(124,58,237,0.12);
+  margin: 2.5rem auto 0;
+  opacity: 0; animation: fadeUp 0.7s ease 0.9s forwards;
+}
+@media (min-width: 1240px) {
+  .hero-terminal {
+    /* centralizado no vão entre o container (860px) e a borda direita, sem passar de 24px da borda */
+    --gap: calc((100vw - var(--container)) / 2);
+    position: absolute; top: 50%; margin: 0;
+    --tw: clamp(340px, 26vw, 420px);
+    max-width: var(--tw);
+    right: max(calc(-1 * (var(--gap) / 2 + var(--tw) / 2)), calc(24px - var(--gap)));
+    transform: translateY(-50%) perspective(1200px) rotateY(-8deg);
+    animation: termIn 0.7s ease 0.9s forwards, floatY 6s ease-in-out 1.6s infinite;
+  }
+}
+@keyframes termIn {
+  from { opacity: 0; transform: translateY(calc(-50% + 24px)) perspective(1200px) rotateY(-8deg); }
+  to   { opacity: 1; transform: translateY(-50%) perspective(1200px) rotateY(-8deg); }
+}
+@keyframes floatY {
+  0%, 100% { transform: translateY(-50%) perspective(1200px) rotateY(-8deg); }
+  50% { transform: translateY(calc(-50% - 10px)) perspective(1200px) rotateY(-8deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-terminal, .type-caret, .term-caret { animation: none !important; opacity: 1; }
+}
